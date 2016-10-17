@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
 
     <name>idea4j-plugin-cache</name>
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/andyadc/idea-framework</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
