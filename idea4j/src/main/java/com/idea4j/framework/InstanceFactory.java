@@ -3,6 +3,8 @@ package com.idea4j.framework;
 import com.idea4j.framework.core.ClassScanner;
 import com.idea4j.framework.core.ConfigHelper;
 import com.idea4j.framework.core.impl.DefaultClassScanner;
+import com.idea4j.framework.ds.DataSourceFactory;
+import com.idea4j.framework.ds.impl.DefaultDataSourceFactory;
 import com.idea4j.framework.mvc.HandlerExceptionResolver;
 import com.idea4j.framework.mvc.HandlerInvoker;
 import com.idea4j.framework.mvc.HandlerMapping;
@@ -100,6 +102,13 @@ public class InstanceFactory {
      */
     public static HandlerExceptionResolver getHandlerExceptionResolver() {
         return getInstance(HANDLER_EXCEPTION_RESOLVER, DefaultHandlerExceptionResolver.class);
+    }
+
+    /**
+     * 获取 DataSourceFactory
+     */
+    public static DataSourceFactory getDataSourceFactory() {
+        return getInstance(DS_FACTORY, DefaultDataSourceFactory.class);
     }
 
     @SuppressWarnings("unchecked")
