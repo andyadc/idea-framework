@@ -1,7 +1,7 @@
 package com.idea4j.framework;
 
 /**
- * 框架异常
+ * Framework Exception
  *
  * @author andaicheng
  */

@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 加载相应的 Helper 类
+ * Load necessary Helper class
  *
  * @author andaicheng
  */

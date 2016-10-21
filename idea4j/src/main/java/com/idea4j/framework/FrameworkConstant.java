@@ -3,7 +3,7 @@ package com.idea4j.framework;
 import com.idea4j.framework.core.ConfigHelper;
 
 /**
- * 框架常量
+ * Framework Constants
  *
  * @author andaicheng
  */

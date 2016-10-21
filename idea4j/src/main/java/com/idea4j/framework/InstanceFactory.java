@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * 实例工厂
+ * Instance Factory
  *
  * @author andaicheng
  */
