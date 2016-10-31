@@ -64,7 +64,7 @@ public abstract class ClassTemplate {
                 }
             }
         } catch (Exception e) {
-            LOGGER.error("获取类出错！", e);
+            LOGGER.error("Get Class list error!", e);
         }
         return classList;
     }
@@ -115,7 +115,7 @@ public abstract class ClassTemplate {
                 }
             }
         } catch (Exception e) {
-            LOGGER.error("添加类出错！", e);
+            LOGGER.error("Add Class error", e);
         }
     }
 
