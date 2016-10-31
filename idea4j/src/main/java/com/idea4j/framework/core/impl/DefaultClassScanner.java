@@ -9,7 +9,7 @@ import java.lang.annotation.Annotation;
 import java.util.List;
 
 /**
- * 默认类扫描器
+ * default class scanner
  *
  * @author andaicheng
  */
