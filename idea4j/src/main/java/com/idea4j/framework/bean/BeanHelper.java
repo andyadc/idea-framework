@@ -40,8 +40,8 @@ public class BeanHelper {
                 }
             }
         } catch (Exception e) {
-            LOGGER.error("初始化 BeanHelper 出错！", e);
-            throw new InitializationError("初始化 BeanHelper 出错！", e);
+            LOGGER.error("Initial BeanHelper error!", e);
+            throw new InitializationError("Initial BeanHelper error!", e);
         }
     }
 
@@ -61,8 +61,8 @@ public class BeanHelper {
     @SuppressWarnings("unchecked")
     public static <T> T getBean(Class<T> cls) {
         if (!beanMap.containsKey(cls)) {
-            LOGGER.error("无法根据类名获取实例！{}", cls);
-            throw new FrameworkException("无法根据类名获取实例！" + cls);
+            LOGGER.error("Can't get instance by class name! {}", cls);
+            throw new FrameworkException("Can't get instance by class name!" + cls);
         }
         return (T) beanMap.get(cls);
     }
