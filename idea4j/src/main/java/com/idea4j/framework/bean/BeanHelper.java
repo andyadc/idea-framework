@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 初始化相关 Bean 类
+ * Initial Bean Class
  *
  * @author andaicheng
  */

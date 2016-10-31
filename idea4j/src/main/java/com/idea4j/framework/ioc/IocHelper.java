@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 初始化 IOC 容器
+ * Initial IOC Container
  *
  * @author andaicheng
  */
@@ -50,8 +50,8 @@ public class IocHelper {
                                     beanField.setAccessible(true); // 将字段设置为 public
                                     beanField.set(beanInstance, implementInstance); // 设置字段初始值
                                 } else {
-                                    LOGGER.error("依赖注入失败！类名：{}，字段名：{}", beanClass.getSimpleName(), interfaceClass.getSimpleName());
-                                    throw new InitializationError("依赖注入失败！类名：" + beanClass.getSimpleName() + "，字段名：" + interfaceClass.getSimpleName());
+                                    LOGGER.error("Dependency Inject error! class name: {}, column name: {}", beanClass.getSimpleName(), interfaceClass.getSimpleName());
+                                    throw new InitializationError("Dependency Inject error! class name: " + beanClass.getSimpleName() + ",，column name: " + interfaceClass.getSimpleName());
                                 }
                             }
                         }
@@ -59,8 +59,8 @@ public class IocHelper {
                 }
             }
         } catch (Exception e) {
-            LOGGER.error("初始化 IocHelper 出错！", e);
-            throw new InitializationError("初始化 IocHelper 出错！", e);
+            LOGGER.error("Initial IocHelper error", e);
+            throw new InitializationError("Initial IocHelper error", e);
         }
     }
 
