@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 初始化 Action 配置
+ * Initial Action Config
  *
  * @author andaicheng
  */
