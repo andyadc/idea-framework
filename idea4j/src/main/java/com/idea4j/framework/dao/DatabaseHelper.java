@@ -5,6 +5,7 @@ import com.idea4j.framework.ds.DataSourceFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 
 /**
@@ -26,4 +27,8 @@ public class DatabaseHelper {
      * 获取数据源工厂
      */
     private static final DataSourceFactory DATA_SOURCE_FACTORY = InstanceFactory.getDataSourceFactory();
+
+    public static DataSource getDataSource() {
+        return DATA_SOURCE_FACTORY.getDataSource();
+    }
 }

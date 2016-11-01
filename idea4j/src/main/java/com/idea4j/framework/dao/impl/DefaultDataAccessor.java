@@ -1,6 +1,21 @@
 package com.idea4j.framework.dao.impl;
 
 import com.idea4j.framework.dao.DataAccessor;
+import com.idea4j.framework.dao.DataAccessorException;
+import com.idea4j.framework.dao.DatabaseHelper;
+import com.idea4j.framework.orm.EntityHelper;
+import com.idea4j.framework.util.MapUtil;
+import org.apache.commons.dbutils.BasicRowProcessor;
+import org.apache.commons.dbutils.BeanProcessor;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.sql.DataSource;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 默认数据访问器
@@ -11,4 +26,40 @@ import com.idea4j.framework.dao.DataAccessor;
  * @version 2016/10/19
  */
 public class DefaultDataAccessor implements DataAccessor {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(DefaultDataAccessor.class);
+
+    private final QueryRunner queryRunner;
+
+    public DefaultDataAccessor() {
+        DataSource dataSource = DatabaseHelper.getDataSource();
+        queryRunner = new QueryRunner(dataSource);
+    }
+
+    private static void printSQL(String sql) {
+        LOGGER.debug("[Idea] SQL - {}", sql);
+    }
+
+    @Override
+    public <T> T queryEntity(Class<T> entityClass, String sql, Object... params) {
+        T result;
+        try {
+            Map<String, String> columnMap = EntityHelper.getColumnMap(entityClass);
+            if (MapUtil.isNotEmpty(columnMap)) {
+                result = queryRunner.query(sql, new BeanHandler<T>(entityClass, new BasicRowProcessor(new BeanProcessor(columnMap))), params);
+            } else {
+                result = queryRunner.query(sql, new BeanHandler<T>(entityClass), params);
+            }
+        } catch (SQLException e) {
+            LOGGER.error("queryEntity error!", e);
+            throw new DataAccessorException("queryEntity error!", e);
+        }
+        printSQL(sql);
+        return result;
+    }
+
+    @Override
+    public <T> List<T> queryEntityList(Class<T> entityClass, String sql, Object... params) {
+        return null;
+    }
 }
