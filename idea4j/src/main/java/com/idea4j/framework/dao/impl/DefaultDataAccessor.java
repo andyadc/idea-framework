@@ -1,7 +1,7 @@
 package com.idea4j.framework.dao.impl;
 
 import com.idea4j.framework.dao.DataAccessor;
-import com.idea4j.framework.dao.DataAccessorException;
+import com.idea4j.framework.dao.DaoException;
 import com.idea4j.framework.dao.DatabaseHelper;
 import com.idea4j.framework.orm.EntityHelper;
 import com.idea4j.framework.util.MapUtil;
@@ -52,7 +52,7 @@ public class DefaultDataAccessor implements DataAccessor {
             }
         } catch (SQLException e) {
             LOGGER.error("queryEntity error!", e);
-            throw new DataAccessorException("queryEntity error!", e);
+            throw new DaoException("queryEntity error!", e);
         }
         printSQL(sql);
         return result;
