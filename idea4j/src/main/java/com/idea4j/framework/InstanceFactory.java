@@ -3,6 +3,8 @@ package com.idea4j.framework;
 import com.idea4j.framework.core.ClassScanner;
 import com.idea4j.framework.core.ConfigHelper;
 import com.idea4j.framework.core.impl.DefaultClassScanner;
+import com.idea4j.framework.dao.DataAccessor;
+import com.idea4j.framework.dao.impl.DefaultDataAccessor;
 import com.idea4j.framework.ds.DataSourceFactory;
 import com.idea4j.framework.ds.impl.DefaultDataSourceFactory;
 import com.idea4j.framework.mvc.HandlerExceptionResolver;
@@ -109,6 +111,13 @@ public class InstanceFactory {
      */
     public static DataSourceFactory getDataSourceFactory() {
         return getInstance(DS_FACTORY, DefaultDataSourceFactory.class);
+    }
+
+    /**
+     * 获取 DataAccessor
+     */
+    public static DataAccessor getDataAccessor() {
+        return getInstance(DATA_ACCESSOR, DefaultDataAccessor.class);
     }
 
     @SuppressWarnings("unchecked")
