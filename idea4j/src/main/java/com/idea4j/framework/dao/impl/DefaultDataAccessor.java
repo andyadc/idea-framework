@@ -38,7 +38,8 @@ public class DefaultDataAccessor implements DataAccessor {
     }
 
     private static void printSQL(String sql) {
-        LOGGER.debug("[Idea] SQL - {}", sql);
+        if (LOGGER.isDebugEnabled())
+            LOGGER.debug("[Idea] SQL - {}", sql);
     }
 
     @Override
