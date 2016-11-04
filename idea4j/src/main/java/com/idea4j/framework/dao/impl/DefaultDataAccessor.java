@@ -1,7 +1,7 @@
 package com.idea4j.framework.dao.impl;
 
-import com.idea4j.framework.dao.DataAccessor;
 import com.idea4j.framework.dao.DaoException;
+import com.idea4j.framework.dao.DataAccessor;
 import com.idea4j.framework.dao.DatabaseHelper;
 import com.idea4j.framework.orm.EntityHelper;
 import com.idea4j.framework.util.MapUtil;
@@ -9,6 +9,7 @@ import org.apache.commons.dbutils.BasicRowProcessor;
 import org.apache.commons.dbutils.BeanProcessor;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,9 +47,9 @@ public class DefaultDataAccessor implements DataAccessor {
         try {
             Map<String, String> columnMap = EntityHelper.getColumnMap(entityClass);
             if (MapUtil.isNotEmpty(columnMap)) {
-                result = queryRunner.query(sql, new BeanHandler<T>(entityClass, new BasicRowProcessor(new BeanProcessor(columnMap))), params);
+                result = queryRunner.query(sql, new BeanHandler<>(entityClass, new BasicRowProcessor(new BeanProcessor(columnMap))), params);
             } else {
-                result = queryRunner.query(sql, new BeanHandler<T>(entityClass), params);
+                result = queryRunner.query(sql, new BeanHandler<>(entityClass), params);
             }
         } catch (SQLException e) {
             LOGGER.error("queryEntity error!", e);
@@ -60,6 +61,19 @@ public class DefaultDataAccessor implements DataAccessor {
 
     @Override
     public <T> List<T> queryEntityList(Class<T> entityClass, String sql, Object... params) {
-        return null;
+        List<T> result;
+        try {
+            Map<String, String> columnMap = EntityHelper.getColumnMap(entityClass);
+            if (MapUtil.isNotEmpty(columnMap)) {
+                result = queryRunner.query(sql, new BeanListHandler<>(entityClass, new BasicRowProcessor(new BeanProcessor(columnMap))), params);
+            } else {
+                result = queryRunner.query(sql, new BeanListHandler<>(entityClass), params);
+            }
+        } catch (SQLException e) {
+            LOGGER.error("queryEntityList error!", e);
+            throw new DaoException("queryEntityList error!", e);
+        }
+        printSQL(sql);
+        return result;
     }
 }
