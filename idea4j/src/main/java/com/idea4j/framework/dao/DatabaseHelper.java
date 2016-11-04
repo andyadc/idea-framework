@@ -29,6 +29,8 @@ public class DatabaseHelper {
      */
     private static final DataSourceFactory DATA_SOURCE_FACTORY = InstanceFactory.getDataSourceFactory();
 
+    private DatabaseHelper (){}
+
     public static DataSource getDataSource() {
         return DATA_SOURCE_FACTORY.getDataSource();
     }
