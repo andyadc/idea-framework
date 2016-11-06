@@ -15,6 +15,15 @@ public class SqlHelper {
         throw new UnsupportedOperationException();
     }
 
+    /**
+     * generate 'select count(*)'
+     */
+    public static String generateSelectSqlForCount(Class<?> entityClass, String condition) {
+        StringBuilder sql = new StringBuilder("SELECT COUNT(*) FROM ").append(getTable(entityClass));
+        sql.append(generateWhere(condition));
+        return sql.toString();
+    }
+
     private static String getTable(Class<?> entityClass) {
         return EntityHelper.getTableName(entityClass);
     }
