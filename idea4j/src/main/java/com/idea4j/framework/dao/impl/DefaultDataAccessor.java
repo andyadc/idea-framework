@@ -19,9 +19,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 默认数据访问器
+ * Default Data Accessor
  * <br/>
- * 基于 Apache Commons DbUtils 实现
+ * Base on Apache Commons DbUtils
  *
  * @author andaicheng
  * @version 2016/10/19
