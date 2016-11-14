@@ -6,7 +6,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.serializer.SimpleDateFormatSerializer;
 
 /**
- * json utility class (fastjson)
+ * json utility (fastjson)
  *
  * @author andaicheng
  */

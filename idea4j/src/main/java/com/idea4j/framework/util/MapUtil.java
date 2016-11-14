@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * 映射操作工具类
+ * map utility
  *
  * @author andaicheng
  */

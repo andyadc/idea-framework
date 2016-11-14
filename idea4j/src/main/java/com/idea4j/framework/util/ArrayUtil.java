@@ -1,7 +1,7 @@
 package com.idea4j.framework.util;
 
 /**
- * 数组操作工具类
+ * array utility
  *
  * @author andaicheng
  */

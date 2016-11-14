@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 对象操作工具类
+ * Object utility
  *
  * @author andaicheng
  */

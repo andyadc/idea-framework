@@ -16,7 +16,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 /**
- * 类操作工具类
+ * class utility
  *
  * @author andaicheng
  */

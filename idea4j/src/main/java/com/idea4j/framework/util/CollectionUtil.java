@@ -3,7 +3,7 @@ package com.idea4j.framework.util;
 import java.util.Collection;
 
 /**
- * 集合操作工具类
+ * Collection utility
  *
  * @author andaicheng
  */
