@@ -4,7 +4,7 @@ import java.lang.annotation.Annotation;
 import java.util.List;
 
 /**
- * 类扫描器
+ * Class Scanner
  *
  * @author andaicheng
  */
