@@ -121,7 +121,7 @@ public class InstanceFactory {
     }
 
     @SuppressWarnings("unchecked")
-    public static <T> T getInstance(String cacheKey, Class<T> defaultImplClass) {
+    private static <T> T getInstance(String cacheKey, Class<T> defaultImplClass) {
         // 若缓存中存在对应的实例，则返回该实例
         if (INSTANCE_CACHE.containsKey(cacheKey)) {
             return (T) INSTANCE_CACHE.get(cacheKey);
