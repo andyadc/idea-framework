@@ -17,6 +17,11 @@
         <developer>
             <name>andyadc</name>
             <email>andaicheng@gmail.com</email>
+            <url>http://andyadc.com</url>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+8</timezone>
         </developer>
     </developers>
 
@@ -28,6 +33,7 @@
         <junit.version>4.12</junit.version>
         <commons-codec.version>1.10</commons-codec.version>
         <commons-dbutils.version>1.6</commons-dbutils.version>
+        <commons-lang.version>3.5</commons-lang.version>
 
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -55,24 +61,30 @@
             <artifactId>cglib</artifactId>
             <version>${cglib.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>${commons-codec.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-dbutils</groupId>
-            <artifactId>commons-dbutils</artifactId>
-            <version>${commons-dbutils.version}</version>
-        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- eventually be removed -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+            <version>${commons-dbutils.version}</version>
+        </dependency>
+
     </dependencies>
 
     <profiles>
