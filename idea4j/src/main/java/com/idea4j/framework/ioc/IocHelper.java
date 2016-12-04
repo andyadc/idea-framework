@@ -1,12 +1,12 @@
 package com.idea4j.framework.ioc;
 
+import com.andyadc.foundation.util.ArrayUtil;
+import com.andyadc.foundation.util.CollectionUtil;
 import com.idea4j.framework.bean.BeanHelper;
 import com.idea4j.framework.core.ClassHelper;
 import com.idea4j.framework.core.fault.InitializationError;
 import com.idea4j.framework.ioc.annotation.Impl;
 import com.idea4j.framework.ioc.annotation.Inject;
-import com.idea4j.framework.util.ArrayUtil;
-import com.idea4j.framework.util.CollectionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

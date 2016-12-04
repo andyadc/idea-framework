@@ -1,12 +1,12 @@
 package com.idea4j.framework.orm;
 
+import com.andyadc.foundation.util.ArrayUtil;
+import com.andyadc.foundation.util.MapUtil;
+import com.andyadc.foundation.util.StringUtil;
 import com.idea4j.framework.core.ClassHelper;
 import com.idea4j.framework.orm.annotation.Column;
 import com.idea4j.framework.orm.annotation.Entity;
 import com.idea4j.framework.orm.annotation.Table;
-import com.idea4j.framework.util.ArrayUtil;
-import com.idea4j.framework.util.MapUtil;
-import com.idea4j.framework.util.StringUtil;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;

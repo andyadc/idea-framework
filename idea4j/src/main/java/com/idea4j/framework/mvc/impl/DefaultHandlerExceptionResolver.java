@@ -1,7 +1,7 @@
 package com.idea4j.framework.mvc.impl;
 
+import com.andyadc.foundation.util.WebUtil;
 import com.idea4j.framework.mvc.HandlerExceptionResolver;
-import com.idea4j.framework.util.WebUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

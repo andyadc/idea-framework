@@ -1,5 +1,7 @@
 package com.idea4j.framework.aop;
 
+import com.andyadc.foundation.util.ClassUtil;
+import com.andyadc.foundation.util.StringUtil;
 import com.idea4j.framework.FrameworkConstant;
 import com.idea4j.framework.InstanceFactory;
 import com.idea4j.framework.aop.annotation.Aspect;
@@ -10,8 +12,6 @@ import com.idea4j.framework.bean.BeanHelper;
 import com.idea4j.framework.core.ClassHelper;
 import com.idea4j.framework.core.ClassScanner;
 import com.idea4j.framework.core.fault.InitializationError;
-import com.idea4j.framework.util.ClassUtil;
-import com.idea4j.framework.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

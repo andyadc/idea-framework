@@ -1,7 +1,7 @@
 package com.idea4j.framework.core;
 
+import com.andyadc.foundation.util.PropsUtil;
 import com.idea4j.framework.FrameworkConstant;
-import com.idea4j.framework.util.PropsUtil;
 
 import java.util.Properties;
 

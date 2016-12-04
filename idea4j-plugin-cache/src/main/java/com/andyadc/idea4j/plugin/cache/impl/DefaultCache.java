@@ -1,7 +1,7 @@
 package com.andyadc.idea4j.plugin.cache.impl;
 
+import com.andyadc.foundation.util.Assert;
 import com.andyadc.idea4j.plugin.cache.Cache;
-import com.idea4j.framework.util.Assert;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

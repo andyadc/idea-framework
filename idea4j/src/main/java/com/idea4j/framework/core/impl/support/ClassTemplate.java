@@ -1,7 +1,7 @@
 package com.idea4j.framework.core.impl.support;
 
-import com.idea4j.framework.util.ClassUtil;
-import com.idea4j.framework.util.StringUtil;
+import com.andyadc.foundation.util.ClassUtil;
+import com.andyadc.foundation.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
