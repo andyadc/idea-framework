@@ -26,7 +26,7 @@ public class PropsUtil {
      * 加载属性文件
      */
     public static Properties loadProps(String propsPath) {
-        if (StringUtil.isBlank(propsPath)) {
+        if (StringUtils.isBlank(propsPath)) {
             throw new IllegalArgumentException();
         }
         Properties props = new Properties();

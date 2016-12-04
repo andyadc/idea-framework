@@ -38,7 +38,7 @@ public class CastUtil {
         double doubleValue = defaultValue;
         if (obj != null) {
             String strValue = castString(obj);
-            if (StringUtil.isNotBlank(strValue)) {
+            if (StringUtils.isNotBlank(strValue)) {
                 try {
                     doubleValue = Double.parseDouble(strValue);
                 } catch (NumberFormatException e) {
@@ -63,7 +63,7 @@ public class CastUtil {
         long longValue = defaultValue;
         if (obj != null) {
             String strValue = castString(obj);
-            if (StringUtil.isNotBlank(strValue)) {
+            if (StringUtils.isNotBlank(strValue)) {
                 try {
                     longValue = Long.parseLong(strValue);
                 } catch (NumberFormatException e) {
@@ -88,7 +88,7 @@ public class CastUtil {
         int intValue = defaultValue;
         if (obj != null) {
             String strValue = castString(obj);
-            if (StringUtil.isNotBlank(strValue)) {
+            if (StringUtils.isNotBlank(strValue)) {
                 try {
                     intValue = Integer.parseInt(strValue);
                 } catch (NumberFormatException e) {

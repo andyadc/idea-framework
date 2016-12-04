@@ -2,7 +2,7 @@ package com.idea4j.framework.mvc;
 
 import com.andyadc.foundation.util.ArrayUtil;
 import com.andyadc.foundation.util.CollectionUtil;
-import com.andyadc.foundation.util.StringUtil;
+import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.core.ClassHelper;
 import com.idea4j.framework.mvc.annotation.Action;
 import com.idea4j.framework.mvc.annotation.Request;
@@ -73,7 +73,7 @@ public class ActionHelper {
         // 判断 Request Path 中是否带有占位符
         if (requestPath.matches(".+\\{\\w+\\}.*")) {
             // 将请求路径中的占位符 {\w+} 转换为正则表达式 (\\w+)
-            requestPath = StringUtil.replaceAll(requestPath, "\\{\\w+\\}", "(\\\\w+)");
+            requestPath = StringUtils.replaceAll(requestPath, "\\{\\w+\\}", "(\\\\w+)");
             // 将 Requester 与 Handler 放入 Regexp Action Map 中
             regexpActionMap.put(new Requester(requestMethod, requestPath), new Handler(actionClass, actionMethod));
         } else {

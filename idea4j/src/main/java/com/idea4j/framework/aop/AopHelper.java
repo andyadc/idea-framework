@@ -1,7 +1,7 @@
 package com.idea4j.framework.aop;
 
 import com.andyadc.foundation.util.ClassUtil;
-import com.andyadc.foundation.util.StringUtil;
+import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.FrameworkConstant;
 import com.idea4j.framework.InstanceFactory;
 import com.idea4j.framework.aop.annotation.Aspect;
@@ -92,8 +92,8 @@ public class AopHelper {
         Class<? extends Annotation> annotation = aspect.annotation();
 
         // 若包名不为空，则需进一步判断类名是否为空
-        if (StringUtil.isNotBlank(pkg)) {
-            if (StringUtil.isNotBlank(cls)) {
+        if (StringUtils.isNotBlank(pkg)) {
+            if (StringUtils.isNotBlank(cls)) {
                 // 若类名不为空，则仅添加该类
                 targetClassList.add(ClassUtil.loadClass(pkg + "." + cls, false));
             } else {

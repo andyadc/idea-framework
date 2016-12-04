@@ -1,7 +1,7 @@
 package com.idea4j.framework.core.impl.support;
 
 import com.andyadc.foundation.util.ClassUtil;
-import com.andyadc.foundation.util.StringUtil;
+import com.andyadc.foundation.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -94,7 +94,7 @@ public abstract class ClassTemplate {
                 if (file.isFile()) {
                     // 获取类名
                     String className = fileName.substring(0, fileName.lastIndexOf('.'));
-                    if (StringUtil.isNotBlank(packageName)) {
+                    if (StringUtils.isNotBlank(packageName)) {
                         className = packageName + "." + className;
                     }
                     // 执行添加类操作
@@ -102,12 +102,12 @@ public abstract class ClassTemplate {
                 } else {
                     // 获取子包
                     String subPackagePath = fileName;
-                    if (StringUtil.isNotBlank(packagePath)) {
+                    if (StringUtils.isNotBlank(packagePath)) {
                         subPackagePath = packagePath + "/" + subPackagePath;
                     }
                     // 子包名
                     String subPackageName = fileName;
-                    if (StringUtil.isNotBlank(packageName)) {
+                    if (StringUtils.isNotBlank(packageName)) {
                         subPackageName = packageName + "." + subPackageName;
                     }
                     // 递归调用

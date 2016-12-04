@@ -1,6 +1,6 @@
 package com.idea4j.framework.dao;
 
-import com.andyadc.foundation.util.StringUtil;
+import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.orm.EntityHelper;
 
 /**
@@ -30,7 +30,7 @@ public class SqlHelper {
 
     private static String generateWhere(String condition) {
         String where = "";
-        if (StringUtil.isNotBlank(condition)) {
+        if (StringUtils.isNotBlank(condition)) {
             where += " WHERE " + condition;
         }
         return where;
@@ -38,7 +38,7 @@ public class SqlHelper {
 
     private static String generateOrder(String sort) {
         String order = "";
-        if (StringUtil.isNotBlank(sort)) {
+        if (StringUtils.isNotBlank(sort)) {
             order += " ORDER BY " + sort;
         }
         return order;

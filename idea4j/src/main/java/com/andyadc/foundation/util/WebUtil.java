@@ -29,7 +29,7 @@ public class WebUtil {
      */
     public static String getRequestPath(HttpServletRequest request) {
         String servletPath = request.getServletPath();
-        String pathInfo = StringUtil.defaultIfBlank(request.getPathInfo(), StringUtil.EMPTY);
+        String pathInfo = StringUtils.defaultIfBlank(request.getPathInfo(), StringUtils.EMPTY);
         return servletPath + pathInfo;
     }
 

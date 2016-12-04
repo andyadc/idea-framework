@@ -2,7 +2,7 @@ package com.idea4j.framework.orm;
 
 import com.andyadc.foundation.util.ArrayUtil;
 import com.andyadc.foundation.util.MapUtil;
-import com.andyadc.foundation.util.StringUtil;
+import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.core.ClassHelper;
 import com.idea4j.framework.orm.annotation.Column;
 import com.idea4j.framework.orm.annotation.Entity;
@@ -48,7 +48,7 @@ public class EntityHelper {
             tableName = clazz.getAnnotation(Table.class).value();
         } else {
             // 若不存在，则将实体类名转换为下划线风格的表名
-            tableName = StringUtil.camelhumpToUnderline(clazz.getSimpleName());
+            tableName = StringUtils.camelCaseToUnderScoreCase(clazz.getSimpleName());
         }
         entityClassTableNameMap.put(clazz, tableName);
     }
@@ -68,7 +68,7 @@ public class EntityHelper {
                     columnName = field.getAnnotation(Column.class).value();
                 } else {
                     // 若不存在，则将字段名转换为下划线风格的列名
-                    columnName = StringUtil.camelhumpToUnderline(fieldName);
+                    columnName = StringUtils.camelCaseToUnderScoreCase(fieldName);
                 }
                 fieldMap.put(fieldName, columnName);
             }
@@ -85,7 +85,7 @@ public class EntityHelper {
     }
 
     public static String getColumnName(Class<?> entityClass, String fieldName) {
-        return StringUtil.defaultIfBlank(getFieldMap(entityClass).get(fieldName), fieldName);
+        return StringUtils.defaultIfBlank(getFieldMap(entityClass).get(fieldName), fieldName);
     }
 
     public static Map<String, String> getColumnMap(Class<?> entityClass) {

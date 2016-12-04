@@ -1,7 +1,7 @@
 package com.idea4j.framework;
 
 import com.andyadc.foundation.util.ObjectUtil;
-import com.andyadc.foundation.util.StringUtil;
+import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.core.ClassScanner;
 import com.idea4j.framework.core.ConfigHelper;
 import com.idea4j.framework.core.impl.DefaultClassScanner;
@@ -129,7 +129,7 @@ public class InstanceFactory {
         // 从配置文件中获取相应的接口实现类配置
         String implClassName = ConfigHelper.getString(cacheKey);
         // 若实现类配置不存在，则使用默认实现类
-        if (StringUtil.isBlank(implClassName)) {
+        if (StringUtils.isBlank(implClassName)) {
             implClassName = defaultImplClass.getName();
         }
         // 通过反射创建该实现类对应的实例
