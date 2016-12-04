@@ -2,7 +2,7 @@ package com.idea4j.framework.mvc.impl;
 
 import com.andyadc.foundation.util.CastUtil;
 import com.andyadc.foundation.util.ClassUtil;
-import com.andyadc.foundation.util.MapUtil;
+import com.andyadc.foundation.util.MapUtils;
 import com.andyadc.foundation.util.WebUtil;
 import com.idea4j.framework.FrameworkException;
 import com.idea4j.framework.InstanceFactory;
@@ -59,7 +59,7 @@ public class DefaultHandlerInvoker implements HandlerInvoker {
 
         // 添加普通请求参数列表（包括 Query String 与 Form Data）
         Map<String, Object> requestParamMap = WebUtil.getRequestParamMap(request);
-        if (MapUtil.isNotEmpty(requestParamMap)) {
+        if (MapUtils.isNotEmpty(requestParamMap)) {
             paramList.add(new Params(requestParamMap));
         }
 

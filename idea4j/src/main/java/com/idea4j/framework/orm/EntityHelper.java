@@ -1,7 +1,7 @@
 package com.idea4j.framework.orm;
 
 import com.andyadc.foundation.util.ArrayUtil;
-import com.andyadc.foundation.util.MapUtil;
+import com.andyadc.foundation.util.MapUtils;
 import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.core.ClassHelper;
 import com.idea4j.framework.orm.annotation.Column;
@@ -89,7 +89,7 @@ public class EntityHelper {
     }
 
     public static Map<String, String> getColumnMap(Class<?> entityClass) {
-        return MapUtil.reverse(getFieldMap(entityClass));
+        return MapUtils.reverse(getFieldMap(entityClass));
     }
 
 }

@@ -1,6 +1,6 @@
 package com.idea4j.framework.dao.impl;
 
-import com.andyadc.foundation.util.MapUtil;
+import com.andyadc.foundation.util.MapUtils;
 import com.idea4j.framework.dao.DaoException;
 import com.idea4j.framework.dao.DataAccessor;
 import com.idea4j.framework.dao.DatabaseHelper;
@@ -47,7 +47,7 @@ public class DefaultDataAccessor implements DataAccessor {
         T result;
         try {
             Map<String, String> columnMap = EntityHelper.getColumnMap(entityClass);
-            if (MapUtil.isNotEmpty(columnMap)) {
+            if (MapUtils.isNotEmpty(columnMap)) {
                 result = queryRunner.query(sql, new BeanHandler<>(entityClass, new BasicRowProcessor(new BeanProcessor(columnMap))), params);
             } else {
                 result = queryRunner.query(sql, new BeanHandler<>(entityClass), params);
@@ -65,7 +65,7 @@ public class DefaultDataAccessor implements DataAccessor {
         List<T> result;
         try {
             Map<String, String> columnMap = EntityHelper.getColumnMap(entityClass);
-            if (MapUtil.isNotEmpty(columnMap)) {
+            if (MapUtils.isNotEmpty(columnMap)) {
                 result = queryRunner.query(sql, new BeanListHandler<>(entityClass, new BasicRowProcessor(new BeanProcessor(columnMap))), params);
             } else {
                 result = queryRunner.query(sql, new BeanListHandler<>(entityClass), params);

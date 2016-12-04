@@ -8,9 +8,9 @@ import java.util.Map;
  *
  * @author andaicheng
  */
-public class MapUtil {
+public class MapUtils {
 
-    private MapUtil() {
+    private MapUtils() {
     }
 
     public static boolean isEmpty(final Map<?, ?> map) {
@@ -22,7 +22,7 @@ public class MapUtil {
     }
 
     /**
-     * 反转map
+     * <p>Reverses a Map<K, V> to Map<V, K>.</p>
      */
     public static <K, V> Map<V, K> reverse(Map<K, V> source) {
         Map<V, K> target = null;
