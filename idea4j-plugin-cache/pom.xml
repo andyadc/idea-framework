@@ -1,13 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>idea-framework</artifactId>
-        <groupId>com.andyadc</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.andyadc</groupId>
     <artifactId>idea4j-plugin-cache</artifactId>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <name>idea4j-plugin-cache</name>
@@ -15,8 +12,10 @@
     <url>https://github.com/andyadc/idea-framework</url>
 
     <properties>
+        <idea4j-framework.version>0.0.1</idea4j-framework.version>
         <junit.version>4.12</junit.version>
-        <idea4j-framework.version>1.0-SNAPSHOT</idea4j-framework.version>
+
+        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -33,4 +32,19 @@
             <version>${idea4j-framework.version}</version>
         </dependency>
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>java-version</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <jdk>${java.version}</jdk>
+            </activation>
+            <properties>
+                <maven.compiler.source>${java.version}</maven.compiler.source>
+                <maven.compiler.target>${java.version}</maven.compiler.target>
+                <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
+            </properties>
+        </profile>
+    </profiles>
 </project>
