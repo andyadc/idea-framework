@@ -6,8 +6,15 @@ import java.io.File;
 import java.io.IOException;
 
 /**
+ * <code>org.springframework.util.FileSystemUtils</code>
+ * <p>
+ * Simple utility methods for file and stream copying. All copy methods use a block size
+ * of 4096 bytes, and close all affected streams when done. A variation of the copy
+ * methods from this class that leave streams open can be found in {@link StreamUtils}.
+ *
  * @author andaicheng
  * @version 2016/12/4
+ * @see StreamUtils
  */
 public abstract class FileSystemUtils {
 

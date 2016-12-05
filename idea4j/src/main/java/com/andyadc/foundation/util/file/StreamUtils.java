@@ -6,6 +6,8 @@ import java.io.*;
 import java.nio.charset.Charset;
 
 /**
+ * <code>org.springframework.util.StreamUtils</code>
+ * <p>
  * Simple utility methods for dealing with streams. The copy methods of this class are
  * similar to those defined in {@link FileCopyUtils} except that all affected streams are
  * left open when done. All copy methods use a block size of 4096 bytes.
