@@ -1,7 +1,7 @@
 package com.idea4j.framework.mvc;
 
 import com.andyadc.foundation.util.ArrayUtil;
-import com.andyadc.foundation.util.CollectionUtil;
+import com.andyadc.foundation.util.CollectionUtils;
 import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.core.ClassHelper;
 import com.idea4j.framework.mvc.annotation.Action;
@@ -27,7 +27,7 @@ public class ActionHelper {
 
     static {
         List<Class<?>> actionClassList = ClassHelper.getClassListByAnnotation(Action.class);
-        if (CollectionUtil.isNotEmpty(actionClassList)) {
+        if (CollectionUtils.isNotEmpty(actionClassList)) {
             // 定义两个 Action Map
             Map<Requester, Handler> commonActionMap = new HashMap<>(); // 存放普通 Action Map
             Map<Requester, Handler> regexpActionMap = new HashMap<>(); // 存放带有正则表达式的 Action Map

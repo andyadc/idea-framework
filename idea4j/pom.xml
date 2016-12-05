@@ -29,9 +29,12 @@
         <fastjson.version>1.2.21</fastjson.version>
         <cglib.version>3.2.4</cglib.version>
         <junit.version>4.12</junit.version>
+
+        <!-- eventually be removed -->
         <commons-codec.version>1.10</commons-codec.version>
         <commons-dbutils.version>1.6</commons-dbutils.version>
         <commons-lang.version>3.5</commons-lang.version>
+        <commons-collections.version>4.1</commons-collections.version>
 
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -81,6 +84,11 @@
             <groupId>commons-dbutils</groupId>
             <artifactId>commons-dbutils</artifactId>
             <version>${commons-dbutils.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collections.version}</version>
         </dependency>
 
     </dependencies>

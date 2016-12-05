@@ -1,7 +1,7 @@
 package com.idea4j.framework.ioc;
 
 import com.andyadc.foundation.util.ArrayUtil;
-import com.andyadc.foundation.util.CollectionUtil;
+import com.andyadc.foundation.util.CollectionUtils;
 import com.idea4j.framework.bean.BeanHelper;
 import com.idea4j.framework.core.ClassHelper;
 import com.idea4j.framework.core.fault.InitializationError;
@@ -75,7 +75,7 @@ public class IocHelper {
             implementClass = interfaceClass.getAnnotation(Impl.class).value();
         } else {
             List<Class<?>> classList = ClassHelper.getClassListBySuper(interfaceClass);
-            if (CollectionUtil.isNotEmpty(classList)) {
+            if (CollectionUtils.isNotEmpty(classList)) {
                 // 获取第一个实现类
                 implementClass = classList.get(0);
             }
