@@ -8,7 +8,10 @@ import java.io.*;
  * @author andaicheng
  * @version 2016/12/4
  */
-public abstract class SerializationUtils {
+public class SerializationUtils {
+
+    private SerializationUtils() {
+    }
 
     /**
      * Serialize the given object to a byte array.
