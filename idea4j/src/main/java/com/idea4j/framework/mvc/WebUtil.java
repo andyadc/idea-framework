@@ -1,5 +1,7 @@
-package com.andyadc.foundation.util;
+package com.idea4j.framework.mvc;
 
+import com.andyadc.foundation.util.JsonUtils;
+import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.FrameworkConstant;
 import com.idea4j.framework.FrameworkException;
 import org.slf4j.Logger;
@@ -42,7 +44,7 @@ public class WebUtil {
             response.setCharacterEncoding(FrameworkConstant.UTF_8);
 
             PrintWriter writer = response.getWriter();
-            writer.write(JsonUtil.toJSONString(object));
+            writer.write(JsonUtils.toJSONString(object));
             writer.flush();
             writer.close();
         } catch (Exception e) {

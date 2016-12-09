@@ -1,6 +1,5 @@
 package com.idea4j.framework.mvc;
 
-import com.andyadc.foundation.util.WebUtil;
 import com.idea4j.framework.FrameworkConstant;
 import com.idea4j.framework.InstanceFactory;
 import org.slf4j.Logger;

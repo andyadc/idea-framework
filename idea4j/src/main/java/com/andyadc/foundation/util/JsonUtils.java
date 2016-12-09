@@ -10,7 +10,7 @@ import com.alibaba.fastjson.serializer.SimpleDateFormatSerializer;
  *
  * @author andaicheng
  */
-public class JsonUtil {
+public class JsonUtils {
 
     private static final SerializeConfig SERIALIZE_CONFIG;
     private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
@@ -30,7 +30,7 @@ public class JsonUtil {
         SERIALIZE_CONFIG.put(java.sql.Date.class, new SimpleDateFormatSerializer(DATE_FORMAT));
     }
 
-    private JsonUtil() {
+    private JsonUtils() {
     }
 
     public static String toJSONString(Object o) {

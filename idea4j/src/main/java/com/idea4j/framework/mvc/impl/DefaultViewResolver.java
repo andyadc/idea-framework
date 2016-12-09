@@ -1,7 +1,7 @@
 package com.idea4j.framework.mvc.impl;
 
-import com.andyadc.foundation.util.WebUtil;
 import com.idea4j.framework.mvc.ViewResolver;
+import com.idea4j.framework.mvc.WebUtil;
 import com.idea4j.framework.mvc.bean.Result;
 import com.idea4j.framework.mvc.bean.View;
 
