@@ -48,7 +48,7 @@ public class WebUtil {
             writer.flush();
             writer.close();
         } catch (Exception e) {
-            LOGGER.error("在响应中写JSON数据出错!", e);
+            LOGGER.error("writeJSON error!", e);
             throw new FrameworkException(e);
         }
     }
@@ -74,7 +74,7 @@ public class WebUtil {
         try {
             response.sendRedirect(request.getContextPath() + path);
         } catch (Exception e) {
-            LOGGER.error("重定向请求出错！", e);
+            LOGGER.error("redirectRequest error!", e);
             throw new FrameworkException(e);
         }
     }
@@ -86,7 +86,7 @@ public class WebUtil {
         try {
             request.getRequestDispatcher(path).forward(request, response);
         } catch (Exception e) {
-            LOGGER.error("转发请求出错！", e);
+            LOGGER.error("forwardRequest error!", e);
             throw new FrameworkException(e);
         }
     }
@@ -98,7 +98,7 @@ public class WebUtil {
         try {
             response.sendError(code, message);
         } catch (Exception e) {
-            LOGGER.error("发送错误代码出错！", e);
+            LOGGER.error("sendError error!", e);
             throw new FrameworkException(e);
         }
     }
