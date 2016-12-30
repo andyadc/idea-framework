@@ -35,6 +35,7 @@
         <commons-dbutils.version>1.6</commons-dbutils.version>
         <commons-lang.version>3.5</commons-lang.version>
         <commons-collections.version>4.1</commons-collections.version>
+        <!-- eventually be removed -->
 
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -90,6 +91,7 @@
             <artifactId>commons-collections4</artifactId>
             <version>${commons-collections.version}</version>
         </dependency>
+        <!-- eventually be removed -->
 
     </dependencies>
 
