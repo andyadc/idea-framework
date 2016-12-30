@@ -25,6 +25,9 @@ public class ProtoStuffSerializer {
         }
     };
 
+    private ProtoStuffSerializer() {
+    }
+
     public static <T> byte[] serialize(T object) {
         Schema<T> schema = getSchema((Class<T>) object.getClass());
 
