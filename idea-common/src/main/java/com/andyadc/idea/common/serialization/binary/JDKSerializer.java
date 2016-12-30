@@ -2,6 +2,8 @@ package com.andyadc.idea.common.serialization.binary;
 
 import com.andyadc.idea.common.serialization.SerializerException;
 import org.apache.commons.lang3.ArrayUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -13,6 +15,11 @@ import java.io.ObjectOutputStream;
  * @version 2016/12/30
  */
 public class JDKSerializer {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(JDKSerializer.class);
+
+    private JDKSerializer() {
+    }
 
     public static <T> byte[] serialize(T object) {
         if (object == null) {
@@ -27,6 +34,7 @@ public class JDKSerializer {
             oos.writeObject(object);
             bytes = baos.toByteArray();
         } catch (Exception e) {
+            LOGGER.error("JDKSerializer serialize error!", e);
             throw new SerializerException(e.getMessage(), e);
         } finally {
             try {
@@ -34,7 +42,7 @@ public class JDKSerializer {
                     oos.close();
                 }
             } catch (Exception e) {
-
+                LOGGER.error("JDKSerializer serialize ObjectOutputStream close error!", e);
             } finally {
                 oos = null;
             }
@@ -44,7 +52,7 @@ public class JDKSerializer {
                     baos.close();
                 }
             } catch (Exception e) {
-
+                LOGGER.error("JDKSerializer serialize ByteArrayOutputStream close error!", e);
             } finally {
                 baos = null;
             }
@@ -67,6 +75,7 @@ public class JDKSerializer {
             ois = new ObjectInputStream(bais);
             object = ois.readObject();
         } catch (Exception e) {
+            LOGGER.error("JDKSerializer deserialize error!", e);
             throw new SerializerException(e.getMessage(), e);
         } finally {
             try {
@@ -74,7 +83,7 @@ public class JDKSerializer {
                     ois.close();
                 }
             } catch (Exception e) {
-
+                LOGGER.error("JDKSerializer deserialize ObjectInputStream close error!", e);
             } finally {
                 ois = null;
             }
@@ -84,7 +93,7 @@ public class JDKSerializer {
                     bais.close();
                 }
             } catch (Exception e) {
-
+                LOGGER.error("JDKSerializer deserialize ByteArrayInputStream close error!", e);
             } finally {
                 bais = null;
             }
