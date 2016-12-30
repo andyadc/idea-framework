@@ -13,6 +13,7 @@
     <modules>
         <module>idea4j</module>
         <module>idea4j-plugin-cache</module>
+        <module>idea-common</module>
     </modules>
 
 </project>
