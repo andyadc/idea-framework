@@ -6,6 +6,10 @@ package com.andyadc.idea.common;
  */
 public final class IdeaConstants {
 
+
     public static final String ENCODING_FORMAT = "UTF-8";
     public static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+
+    private IdeaConstants() {
+    }
 }
