@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializeConfig;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.serializer.SimpleDateFormatSerializer;
+import com.andyadc.idea.common.IdeaConstants;
 
 /**
  * @author andaicheng
@@ -11,7 +12,6 @@ import com.alibaba.fastjson.serializer.SimpleDateFormatSerializer;
  */
 public class FastjsonSerializer {
     private static final SerializeConfig SERIALIZE_CONFIG;
-    private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     private static final SerializerFeature[] SERIALIZER_FEATURE = {
             SerializerFeature.WriteMapNullValue,    // 输出空置字段
@@ -24,8 +24,8 @@ public class FastjsonSerializer {
 
     static {
         SERIALIZE_CONFIG = new SerializeConfig();
-        SERIALIZE_CONFIG.put(java.util.Date.class, new SimpleDateFormatSerializer(DATE_FORMAT));
-        SERIALIZE_CONFIG.put(java.sql.Date.class, new SimpleDateFormatSerializer(DATE_FORMAT));
+        SERIALIZE_CONFIG.put(java.util.Date.class, new SimpleDateFormatSerializer(IdeaConstants.DATE_FORMAT));
+        SERIALIZE_CONFIG.put(java.sql.Date.class, new SimpleDateFormatSerializer(IdeaConstants.DATE_FORMAT));
     }
 
     private FastjsonSerializer() {
@@ -35,7 +35,7 @@ public class FastjsonSerializer {
         return JSON.toJSONString(o, SERIALIZE_CONFIG, SERIALIZER_FEATURE);
     }
 
-    public static <T> T parseObject(String json, Class<T> clazz) {
+    public static <T> T fromJson(String json, Class<T> clazz) {
         return JSON.parseObject(json, clazz);
     }
 }
