@@ -1,7 +1,6 @@
 package com.andyadc.foundation.util;
 
 import java.util.Collection;
-import java.util.Map;
 
 /**
  * Miscellaneous collection utility methods.
@@ -30,21 +29,6 @@ public class CollectionUtils {
 
     public static boolean isNotEmpty(Collection<?> collection) {
         return !isEmpty(collection);
-    }
-
-    /**
-     * Return {@code true} if the supplied Map is {@code null} or empty.
-     * Otherwise, return {@code false}.
-     *
-     * @param map the Map to check
-     * @return whether the given Map is empty
-     */
-    public static boolean isEmpty(Map<?, ?> map) {
-        return map == null || map.isEmpty();
-    }
-
-    public static boolean isNotEmpty(Map<?, ?> map) {
-        return !isEmpty(map);
     }
 
     //-----------------------------------------------------------------------
