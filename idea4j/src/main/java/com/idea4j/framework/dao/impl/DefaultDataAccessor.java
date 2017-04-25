@@ -1,10 +1,10 @@
 package com.idea4j.framework.dao.impl;
 
-import com.andyadc.foundation.util.MapUtils;
 import com.idea4j.framework.dao.DaoException;
 import com.idea4j.framework.dao.DataAccessor;
 import com.idea4j.framework.dao.DatabaseHelper;
 import com.idea4j.framework.orm.EntityHelper;
+import com.idea4j.framework.util.MapUtils;
 import org.apache.commons.dbutils.BasicRowProcessor;
 import org.apache.commons.dbutils.BeanProcessor;
 import org.apache.commons.dbutils.QueryRunner;

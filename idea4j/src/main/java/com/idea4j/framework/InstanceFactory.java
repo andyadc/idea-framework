@@ -1,7 +1,5 @@
 package com.idea4j.framework;
 
-import com.andyadc.foundation.util.ObjectUtil;
-import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.core.ClassScanner;
 import com.idea4j.framework.core.ConfigHelper;
 import com.idea4j.framework.core.impl.DefaultClassScanner;
@@ -17,6 +15,8 @@ import com.idea4j.framework.mvc.impl.DefaultHandlerExceptionResolver;
 import com.idea4j.framework.mvc.impl.DefaultHandlerInvoker;
 import com.idea4j.framework.mvc.impl.DefaultHandlerMapping;
 import com.idea4j.framework.mvc.impl.DefaultViewResolver;
+import com.idea4j.framework.util.ObjectUtil;
+import com.idea4j.framework.util.StringUtils;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

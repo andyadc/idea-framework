@@ -1,8 +1,8 @@
 package com.idea4j.framework.mvc;
 
-import com.andyadc.foundation.util.ArrayUtil;
-import com.andyadc.foundation.util.CastUtil;
-import com.andyadc.foundation.util.CodecUtil;
+import com.idea4j.framework.util.ArrayUtil;
+import com.idea4j.framework.util.CastUtil;
+import com.idea4j.framework.util.CodecUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

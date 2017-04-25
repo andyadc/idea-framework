@@ -1,7 +1,7 @@
 package com.idea4j.framework.dao;
 
-import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.orm.EntityHelper;
+import com.idea4j.framework.util.StringUtils;
 
 /**
  * 封装 SQL 语句相关操作

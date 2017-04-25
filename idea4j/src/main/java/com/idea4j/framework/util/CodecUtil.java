@@ -1,4 +1,4 @@
-package com.andyadc.foundation.util;
+package com.idea4j.framework.util;
 
 import com.idea4j.framework.FrameworkConstant;
 import com.idea4j.framework.FrameworkException;

@@ -1,11 +1,11 @@
 package com.idea4j.framework;
 
-import com.andyadc.foundation.util.ClassUtil;
 import com.idea4j.framework.aop.AopHelper;
 import com.idea4j.framework.bean.BeanHelper;
 import com.idea4j.framework.ioc.IocHelper;
 import com.idea4j.framework.mvc.ActionHelper;
 import com.idea4j.framework.orm.EntityHelper;
+import com.idea4j.framework.util.ClassUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

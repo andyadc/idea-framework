@@ -1,11 +1,11 @@
 package com.idea4j.framework.mvc;
 
-import com.andyadc.foundation.util.ArrayUtil;
-import com.andyadc.foundation.util.CollectionUtils;
-import com.andyadc.foundation.util.StringUtils;
 import com.idea4j.framework.core.ClassHelper;
 import com.idea4j.framework.mvc.annotation.Action;
 import com.idea4j.framework.mvc.annotation.Request;
+import com.idea4j.framework.util.ArrayUtil;
+import com.idea4j.framework.util.CollectionUtils;
+import com.idea4j.framework.util.StringUtils;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

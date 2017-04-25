@@ -1,4 +1,4 @@
-package com.andyadc.foundation.util;
+package com.idea4j.framework.util;
 
 /**
  * 断言工具类

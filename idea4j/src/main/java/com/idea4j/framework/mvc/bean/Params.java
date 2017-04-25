@@ -1,6 +1,6 @@
 package com.idea4j.framework.mvc.bean;
 
-import com.andyadc.foundation.util.CastUtil;
+import com.idea4j.framework.util.CastUtil;
 
 import java.util.Map;
 
