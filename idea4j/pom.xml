@@ -26,7 +26,7 @@
     <properties>
         <servlet.version>3.1.0</servlet.version>
         <slf4j.version>1.7.25</slf4j.version>
-        <fastjson.version>1.2.35</fastjson.version>
+        <fastjson.version>1.2.36</fastjson.version>
         <cglib.version>3.2.5</cglib.version>
         <junit.version>4.12</junit.version>
 
@@ -39,6 +39,8 @@
 
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -100,18 +102,4 @@
 
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>java-version</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <jdk>${java.version}</jdk>
-            </activation>
-            <properties>
-                <maven.compiler.source>${java.version}</maven.compiler.source>
-                <maven.compiler.target>${java.version}</maven.compiler.target>
-                <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
-            </properties>
-        </profile>
-    </profiles>
 </project>
