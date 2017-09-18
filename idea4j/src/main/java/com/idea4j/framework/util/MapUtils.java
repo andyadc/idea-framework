@@ -8,7 +8,7 @@ import java.util.Map;
  *
  * @author andaicheng
  */
-public class MapUtils {
+public final class MapUtils {
 
     private MapUtils() {
     }

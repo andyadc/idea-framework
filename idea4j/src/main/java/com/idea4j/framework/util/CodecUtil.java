@@ -17,7 +17,7 @@ import java.util.UUID;
  *
  * @author andaicheng
  */
-public class CodecUtil {
+public final class CodecUtil {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CodecUtil.class);
 

@@ -10,7 +10,7 @@ import com.alibaba.fastjson.serializer.SimpleDateFormatSerializer;
  *
  * @author andaicheng
  */
-public class JsonUtils {
+public final class JsonUtils {
 
     private static final SerializeConfig SERIALIZE_CONFIG;
     private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";

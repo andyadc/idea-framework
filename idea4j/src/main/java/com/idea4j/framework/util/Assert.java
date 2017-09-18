@@ -5,7 +5,7 @@ package com.idea4j.framework.util;
  *
  * @author andaicheng
  */
-public class Assert {
+public final class Assert {
 
     private Assert() {
     }

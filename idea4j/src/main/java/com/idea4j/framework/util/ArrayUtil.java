@@ -5,7 +5,7 @@ package com.idea4j.framework.util;
  *
  * @author andaicheng
  */
-public class ArrayUtil {
+public final class ArrayUtil {
 
     private ArrayUtil() {
     }

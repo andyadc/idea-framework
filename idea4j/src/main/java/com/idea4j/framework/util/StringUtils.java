@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  * @author andaicheng
  * @version 1.0, 2016-10-07
  */
-public class StringUtils {
+public final class StringUtils {
 
     public static final String EMPTY = "";
     public static final String SPACE = " ";
