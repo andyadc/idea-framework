@@ -7,7 +7,7 @@ import com.idea4j.framework.core.ConfigHelper;
  *
  * @author andaicheng
  */
-public class FrameworkConstant {
+public final class FrameworkConstant {
 
     public static final String UTF_8 = "UTF-8";
 
