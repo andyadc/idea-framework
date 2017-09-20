@@ -5,7 +5,7 @@ package com.idea4j.framework.mvc;
  *
  * @author andaicheng
  */
-@FunctionalInterface
+//@FunctionalInterface
 public interface HandlerMapping {
 
     /**

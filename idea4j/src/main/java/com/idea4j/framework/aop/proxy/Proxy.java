@@ -5,7 +5,7 @@ package com.idea4j.framework.aop.proxy;
  *
  * @author andaicheng
  */
-@FunctionalInterface
+//@FunctionalInterface
 public interface Proxy {
 
     /**
