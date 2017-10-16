@@ -83,8 +83,9 @@ public abstract class ClassTemplate {
             //lambda
             //File[] files = new File(packagePath).listFiles((File f) -> (f.isFile() && f.getName().endsWith(".class")) || f.isDirectory());
 
-            if (files == null)
+            if (files == null) {
                 return;
+            }
 
             // 遍历文件或目录
             for (File file : files) {
