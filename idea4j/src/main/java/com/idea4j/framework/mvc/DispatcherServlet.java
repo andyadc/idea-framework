@@ -23,6 +23,8 @@ public class DispatcherServlet extends HttpServlet {
     private static final long serialVersionUID = 6111456799058930128L;
     private static final Logger LOGGER = LoggerFactory.getLogger(DispatcherServlet.class);
 
+    private static final String FORWARD_SLASH = "/";
+    private static final String BACK_SLASH = "\\";
     private final transient HandlerInvoker handlerInvoker = InstanceFactory.getHandlerInvoker();
     private final transient HandlerMapping handlerMapping = InstanceFactory.getHandlerMapping();
     private final transient HandlerExceptionResolver exceptionResolver = InstanceFactory.getHandlerExceptionResolver();
@@ -44,13 +46,13 @@ public class DispatcherServlet extends HttpServlet {
         LOGGER.debug("[Idea] {}:{}", currentRequestMethod, currentRequestPath);
 
         // 将“/”请求重定向到首页
-        if ("/".equals(currentRequestPath)) {
+        if (FORWARD_SLASH.equals(currentRequestPath)) {
             WebUtil.redirectRequest(FrameworkConstant.HOME_PAGE, request, response);
             return;
         }
 
         // 去掉当前请求路径末尾的“/”
-        if (currentRequestPath.endsWith("/")) {
+        if (currentRequestPath.endsWith(FORWARD_SLASH)) {
             currentRequestPath = currentRequestPath.substring(0, currentRequestPath.length() - 1);
         }
 
