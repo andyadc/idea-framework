@@ -13,6 +13,7 @@ public final class StringUtils {
 
     public static final String EMPTY = "";
     public static final String SPACE = " ";
+    public static final char CHAR_UNDERLINE = '_';
 
     private static final Pattern ToUnderScoreCase_PATTERN = Pattern.compile("[A-Z]");
     private static final Pattern ToCamelCase_PATTERN = Pattern.compile("_[a-z]");
@@ -180,7 +181,7 @@ public final class StringUtils {
             builder.replace(matcher.start() + i, matcher.end() + i, "_" + matcher.group().toLowerCase());
             i++;
         }
-        if (builder.charAt(0) == '_') {
+        if (builder.charAt(0) == CHAR_UNDERLINE) {
             builder.deleteCharAt(0);
         }
         return builder.toString();
