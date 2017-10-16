@@ -21,8 +21,9 @@ public final class ArrayUtil {
     public static <E> boolean contains(E[] arr, E e) {
         if (arr != null) {
             for (E e1 : arr) {
-                if (e.equals(e1))
+                if (e.equals(e1)) {
                     return true;
+                }
             }
         }
         return false;
