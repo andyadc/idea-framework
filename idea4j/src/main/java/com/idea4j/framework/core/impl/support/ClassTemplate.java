@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.net.JarURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -72,20 +73,19 @@ public abstract class ClassTemplate {
     private void addClass(List<Class<?>> classList, String packagePath, String packageName) {
         try {
             // 获取包名路径下的 class 文件或目录
-            /**
-             * <pre>
-             * File[] files = new File(packagePath).listFiles(new FileFilter() {
-             *      @Override
-             *      public boolean accept(File file) {
-             *          return (file.isFile() && file.getName().endsWith(".class")) || file.isDirectory();
-             *      }
-             * });
-             * <pre>
-             */
+            File[] files = new File(packagePath).listFiles(new FileFilter() {
+                @Override
+                public boolean accept(File file) {
+                    return (file.isFile() && file.getName().endsWith(".class")) || file.isDirectory();
+                }
+            });
+
             //lambda
-            File[] files = new File(packagePath).listFiles((File f) -> (f.isFile() && f.getName().endsWith(".class")) || f.isDirectory());
-            if (files == null)
+            //File[] files = new File(packagePath).listFiles((File f) -> (f.isFile() && f.getName().endsWith(".class")) || f.isDirectory());
+
+            if (files == null) {
                 return;
+            }
 
             // 遍历文件或目录
             for (File file : files) {

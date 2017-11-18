@@ -15,7 +15,7 @@
         <idea4j-framework.version>0.0.1</idea4j-framework.version>
         <junit.version>4.12</junit.version>
 
-        <java.version>1.8</java.version>
+        <java.version>1.7</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>

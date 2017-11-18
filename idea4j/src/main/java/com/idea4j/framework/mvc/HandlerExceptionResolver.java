@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author andaicheng
  */
-@FunctionalInterface
+//@FunctionalInterface
 public interface HandlerExceptionResolver {
 
     /**

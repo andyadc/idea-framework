@@ -9,10 +9,14 @@ import java.util.regex.Pattern;
  * @author andaicheng
  * @version 1.0, 2016-10-07
  */
-public class StringUtils {
+public final class StringUtils {
 
     public static final String EMPTY = "";
     public static final String SPACE = " ";
+    public static final char CHAR_UNDERLINE = '_';
+
+    private static final Pattern ToUnderScoreCase_PATTERN = Pattern.compile("[A-Z]");
+    private static final Pattern ToCamelCase_PATTERN = Pattern.compile("_[a-z]");
 
     private StringUtils() {
     }
@@ -170,14 +174,14 @@ public class StringUtils {
      */
     public static String camelCaseToUnderScoreCase(String camelCaseStr) {
         Assert.notNull(camelCaseStr);
-        Matcher matcher = Pattern.compile("[A-Z]").matcher(camelCaseStr);
+        Matcher matcher = ToUnderScoreCase_PATTERN.matcher(camelCaseStr);
         StringBuilder builder = new StringBuilder(camelCaseStr);
         int i;
         for (i = 0; matcher.find(); ) {
             builder.replace(matcher.start() + i, matcher.end() + i, "_" + matcher.group().toLowerCase());
             i++;
         }
-        if (builder.charAt(0) == '_') {
+        if (builder.charAt(0) == CHAR_UNDERLINE) {
             builder.deleteCharAt(0);
         }
         return builder.toString();
@@ -195,7 +199,7 @@ public class StringUtils {
      */
     public static String underScoreCaseToCamelCase(String underScoreCaseStr) {
         Assert.notNull(underScoreCaseStr);
-        Matcher matcher = Pattern.compile("_[a-z]").matcher(underScoreCaseStr);
+        Matcher matcher = ToCamelCase_PATTERN.matcher(underScoreCaseStr);
         StringBuilder builder = new StringBuilder(underScoreCaseStr);
         int i;
         for (i = 0; matcher.find(); ) {

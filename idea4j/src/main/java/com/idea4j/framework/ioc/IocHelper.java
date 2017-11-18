@@ -4,12 +4,12 @@ import com.idea4j.framework.bean.BeanHelper;
 import com.idea4j.framework.core.ClassHelper;
 import com.idea4j.framework.core.fault.InitializationError;
 import com.idea4j.framework.ioc.annotation.Impl;
-import com.idea4j.framework.ioc.annotation.Inject;
 import com.idea4j.framework.util.ArrayUtil;
 import com.idea4j.framework.util.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Map;

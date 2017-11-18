@@ -7,7 +7,7 @@ import javax.sql.DataSource;
  *
  * @author andaicheng
  */
-@FunctionalInterface
+//@FunctionalInterface
 public interface DataSourceFactory {
 
     /**
