@@ -26,14 +26,14 @@
     <properties>
         <servlet.version>3.1.0</servlet.version>
         <slf4j.version>1.7.25</slf4j.version>
-        <fastjson.version>1.2.36</fastjson.version>
+        <fastjson.version>1.2.41</fastjson.version>
         <cglib.version>3.2.5</cglib.version>
         <junit.version>4.12</junit.version>
 
         <!-- eventually be removed -->
-        <commons-codec.version>1.10</commons-codec.version>
-        <commons-dbutils.version>1.6</commons-dbutils.version>
-        <commons-lang.version>3.6</commons-lang.version>
+        <commons-codec.version>1.11</commons-codec.version>
+        <commons-dbutils.version>1.7</commons-dbutils.version>
+        <commons-lang.version>3.7</commons-lang.version>
         <commons-collections.version>4.1</commons-collections.version>
         <!-- eventually be removed -->
 
